@@ -30,7 +30,7 @@ class AmazonS3v3 extends AmazonS3
      */
     public function sync(Target $target, Result $result)
     {
-        $s3 = new S3Client([
+        $s3 = S3Client::factory([
             'region'  => $this->region,
             'version' => '2006-03-01',
             'credentials' => [
